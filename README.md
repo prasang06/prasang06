@@ -7,7 +7,7 @@
 ### About
 I am an undergraduate student at the **Indian Institute of Technology, Hyderabad**, originally from Agartala, Tripura. My academic focus lies at the intersection of theoretical physics and high-performance computing, with a goal of contributing to the fields of computational and quantum physics.
 
-- **Education:** B.Tech/BS at Indian Institute of Technology, Hyderabad
+- **Education:** B.Tech at Indian Institute of Technology, Hyderabad
 - **Background:** ISC State Topper (2024 Examination)
 - **Interests:** Outside of academics, I play the electric guitar and am an avid fan of metal and rock music.
 
