@@ -4,15 +4,11 @@
 
 ---
 
-### 3D Contribution Graph
-
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-rainbow.svg">
   <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-season.svg">
-  <img alt="3d contribution graph" src="./profile-3d-contrib/profile-night-rainbow.svg" width="100%">
+  <img alt="contribution skyline" src="./profile-3d-contrib/profile-night-rainbow.svg" width="100%">
 </picture>
-
-The last ~6 months as an isometric skyline: tall towers are weeks of heavy output, flat stretches are deep-research or recovery periods.
 
 ---
 

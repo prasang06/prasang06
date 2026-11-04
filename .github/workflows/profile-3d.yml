@@ -19,7 +19,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: prasang06
       - name: Crop tower to recent window and apply theme
-        run: python3 .github/crop_tower.py --weeks 27 --theme green
+        run: python3 .github/crop_tower.py --weeks 27 --theme purple
       - name: Commit & Push
         run: |
           git config user.name github-actions
