@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="860" height="352" viewBox="0 0 860 352" role="img" aria-label="Terminal introduction: quantum computing and AI research engineer at IIT Hyderabad">
-  <rect x="0.5" y="0.5" width="859" height="351" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="586" viewBox="0 0 860 586" role="img" aria-label="Terminal: Prasang, quantum computing and AI research engineer at IIT Hyderabad; research interests and stack">
+  <rect x="0.5" y="0.5" width="859" height="585" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
   <path d="M0.5 38 V10.5 A10 10 0 0 1 10.5 0.5 H849.5 A10 10 0 0 1 859.5 10.5 V38 Z" fill="#161b22"/>
   <line x1="0.5" y1="38" x2="859.5" y2="38" stroke="#30363d" stroke-width="1"/>
   <circle cx="24" cy="19.5" r="5.5" fill="#ff5f56"/>
@@ -11,11 +11,19 @@
     <text x="24" y="100"><tspan fill="#8b949e">$&#160;</tspan><tspan fill="#e6edf3">whoami</tspan></text>
     <text x="24" y="126" fill="#c9d1d9">Quantum computing &amp; AI research engineer at IIT Hyderabad</text>
     <text x="24" y="152" fill="#c9d1d9">using computation to understand physical systems</text>
-    <text x="24" y="204"><tspan fill="#8b949e">$&#160;</tspan><tspan fill="#e6edf3">focus</tspan></text>
-    <text x="24" y="230"><tspan fill="#6e7681">·&#160;</tspan><tspan fill="#8b949e">quantum algorithms &amp; quantum machine learning</tspan></text>
-    <text x="24" y="256"><tspan fill="#6e7681">·&#160;</tspan><tspan fill="#8b949e">scientific ML — PINNs, neural PDE solvers</tspan></text>
-    <text x="24" y="282"><tspan fill="#6e7681">·&#160;</tspan><tspan fill="#8b949e">optimization — QUBO, hybrid solvers</tspan></text>
-    <text x="24" y="308"><tspan fill="#6e7681">·&#160;</tspan><tspan fill="#8b949e">LLMs &amp; reinforcement learning</tspan></text>
-    <text x="24" y="334"><tspan fill="#8b949e">$&#160;</tspan><tspan fill="#e6edf3">▊</tspan></text>
+    <text x="24" y="204"><tspan fill="#8b949e">$&#160;</tspan><tspan fill="#e6edf3">cat</tspan><tspan fill="#8b949e">&#160;</tspan><tspan fill="#79c0ff">research.txt</tspan></text>
+    <text x="24" y="230" fill="#8b949e">&#160;&#160;quantum computing &amp; quantum algorithms</text>
+    <text x="24" y="256" fill="#8b949e">&#160;&#160;quantum machine learning</text>
+    <text x="24" y="282" fill="#8b949e">&#160;&#160;scientific ML — PINNs, neural PDE solvers</text>
+    <text x="24" y="308" fill="#8b949e">&#160;&#160;computational physics</text>
+    <text x="24" y="334" fill="#8b949e">&#160;&#160;optimization — QUBO, hybrid solvers</text>
+    <text x="24" y="360" fill="#8b949e">&#160;&#160;ai, llms &amp; reinforcement learning</text>
+    <text x="24" y="412"><tspan fill="#8b949e">$&#160;</tspan><tspan fill="#e6edf3">stack</tspan></text>
+    <text x="24" y="438"><tspan fill="#8b949e">&#160;&#160;</tspan><tspan fill="#7ee787">langs</tspan><tspan fill="#8b949e">&#160;&#160;&#160;&#160;python, c++, c, julia</tspan></text>
+    <text x="24" y="464"><tspan fill="#8b949e">&#160;&#160;</tspan><tspan fill="#7ee787">sci</tspan><tspan fill="#8b949e">&#160;&#160;&#160;&#160;&#160;&#160;jax, numpy, scipy</tspan></text>
+    <text x="24" y="490"><tspan fill="#8b949e">&#160;&#160;</tspan><tspan fill="#7ee787">ml</tspan><tspan fill="#8b949e">&#160;&#160;&#160;&#160;&#160;&#160;&#160;pytorch, tensorflow</tspan></text>
+    <text x="24" y="516"><tspan fill="#8b949e">&#160;&#160;</tspan><tspan fill="#7ee787">quantum</tspan><tspan fill="#8b949e">&#160;&#160;qiskit</tspan></text>
+    <text x="24" y="542"><tspan fill="#8b949e">&#160;&#160;</tspan><tspan fill="#7ee787">infra</tspan><tspan fill="#8b949e">&#160;&#160;&#160;&#160;cuda, linux, hpc, distributed inference</tspan></text>
+    <text x="24" y="568"><tspan fill="#8b949e">$&#160;</tspan><tspan fill="#e6edf3">▊</tspan></text>
   </g>
 </svg>

@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/terminal.svg" width="860" alt="Terminal — Prasang: quantum computing and AI research engineer at IIT Hyderabad" />
+  <img src="./assets/terminal.svg" width="860" alt="Terminal — Prasang: quantum computing and AI research engineer at IIT Hyderabad, research interests and stack" />
 </p>
 
 ---
@@ -13,14 +13,6 @@
 </picture>
 
 The last ~6 months as an isometric skyline: tall towers are weeks of heavy output, flat stretches are deep-research or recovery periods.
-
----
-
-### Technical Work
-
-<p align="center">
-  <img src="./assets/terminal-work.svg" width="860" alt="Terminal — research interests and stack" />
-</p>
 
 ---
 
