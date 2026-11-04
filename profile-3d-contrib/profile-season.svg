@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 1200 340" role="img" aria-label="3D contribution graph placeholder">
+  <rect width="1200" height="340" fill="#ffffff"/>
+  <text x="600" y="175" text-anchor="middle" font-family="ui-monospace, 'SF Mono', Menlo, monospace" font-size="18" fill="#57606a">3D contribution tower — generated daily by GitHub Actions</text>
+</svg>
