@@ -16,16 +16,6 @@ My contribution history as an isometric skyline: tall towers are weeks of heavy 
 
 ---
 
-### Selected Projects
-
-- **[TISE-PINN-IMPLEMENTATION](https://github.com/prasang06/TISE-PINN-IMPLEMENTATION)** — Physics-informed neural network (PyTorch) that solves the 1D Schrödinger eigenvalue problem, recovering bound-state energies and wavefunctions for standard Hamiltonians.
-- **[Quantum-Phase-Recognition-Pipeline](https://github.com/prasang06/Quantum-Phase-Recognition-Pipeline)** — Quantum ML pipeline that learns to recognize the phase transition of the transverse-field Ising model: VQE ground states encoded into a variational quantum classifier (Qiskit, JAX).
-- **[Mini-RL-Gym-for-Quantum-Circuits-using-ZX-Calc](https://github.com/prasang06/Mini-RL-Gym-for-Quantum-Circuits-using-ZX-Calc)** — Q-learning agent that learns ZX-calculus rules to simplify quantum circuits (PyZX).
-- **[TopoRAG](https://github.com/prasang06/TopoRAG)** — Topology-aware graph RAG for scientific literature: arXiv ingestion, GCN/GAT citation-graph embeddings (JAX), dense retrieval, local-LLM synthesis.
-- **[TDSE-for-Qubit-Dynamics](https://github.com/prasang06/TDSE-for-Qubit-Dynamics)** — JAX simulator for static and driven qubit dynamics via the time-dependent Schrödinger equation, with Bloch-sphere visualizations.
-
----
-
 ### Technical Work
 
 **Research interests**
