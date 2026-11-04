@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="352" viewBox="0 0 860 352" role="img" aria-label="Terminal introduction: quantum computing and AI research engineer at IIT Hyderabad">
+  <rect x="0.5" y="0.5" width="859" height="351" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <path d="M0.5 38 V10.5 A10 10 0 0 1 10.5 0.5 H849.5 A10 10 0 0 1 859.5 10.5 V38 Z" fill="#161b22"/>
+  <line x1="0.5" y1="38" x2="859.5" y2="38" stroke="#30363d" stroke-width="1"/>
+  <circle cx="24" cy="19.5" r="5.5" fill="#ff5f56"/>
+  <circle cx="42" cy="19.5" r="5.5" fill="#ffbd2e"/>
+  <circle cx="60" cy="19.5" r="5.5" fill="#27c93f"/>
+  <text x="430" y="24.5" text-anchor="middle" font-family="'JetBrains Mono','Fira Code','SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="14" fill="#8b949e">prasang@archlinux</text>
+  <g font-family="'JetBrains Mono','Fira Code','SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="15">
+    <text x="24" y="74"><tspan fill="#7ee787">prasang@archlinux</tspan><tspan fill="#8b949e">&#160;~</tspan></text>
+    <text x="24" y="100"><tspan fill="#8b949e">$&#160;</tspan><tspan fill="#e6edf3">whoami</tspan></text>
+    <text x="24" y="126" fill="#c9d1d9">Quantum computing &amp; AI research engineer at IIT Hyderabad</text>
+    <text x="24" y="152" fill="#c9d1d9">using computation to understand physical systems</text>
+    <text x="24" y="204"><tspan fill="#8b949e">$&#160;</tspan><tspan fill="#e6edf3">focus</tspan></text>
+    <text x="24" y="230"><tspan fill="#6e7681">·&#160;</tspan><tspan fill="#8b949e">quantum algorithms &amp; quantum machine learning</tspan></text>
+    <text x="24" y="256"><tspan fill="#6e7681">·&#160;</tspan><tspan fill="#8b949e">scientific ML — PINNs, neural PDE solvers</tspan></text>
+    <text x="24" y="282"><tspan fill="#6e7681">·&#160;</tspan><tspan fill="#8b949e">optimization — QUBO, hybrid solvers</tspan></text>
+    <text x="24" y="308"><tspan fill="#6e7681">·&#160;</tspan><tspan fill="#8b949e">LLMs &amp; reinforcement learning</tspan></text>
+    <text x="24" y="334"><tspan fill="#8b949e">$&#160;</tspan><tspan fill="#e6edf3">▊</tspan></text>
+  </g>
+</svg>

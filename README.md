@@ -1,18 +1,6 @@
-# Hi, I'm Prasang
-
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=A9B1D6&center=true&vCenter=true&width=580&lines=Quantum+Computing+%26+AI+Research+Engineer;Scientific+Machine+Learning;Computational+Physics;Electric+Guitarist" alt="Typing SVG" />
+  <img src="./assets/terminal.svg" width="860" alt="Terminal — Prasang: quantum computing and AI research engineer at IIT Hyderabad" />
 </p>
-
----
-
-### About
-
-I am an undergraduate student at the **Indian Institute of Technology, Hyderabad**, originally from Agartala, Tripura. I work at the intersection of **quantum computing and artificial intelligence** — interested in understanding physical systems and using computation to solve difficult problems.
-
-- **Education:** B.Tech at the Indian Institute of Technology, Hyderabad
-- **Background:** ISC State Topper (2024 Examination)
-- **Off the clock:** Electric guitar; metal and rock music
 
 ---
 
@@ -28,7 +16,19 @@ My contribution history as an isometric skyline: tall towers are weeks of heavy 
 
 ---
 
-### Research Interests
+### Selected Projects
+
+- **[TISE-PINN-IMPLEMENTATION](https://github.com/prasang06/TISE-PINN-IMPLEMENTATION)** — Physics-informed neural network (PyTorch) that solves the 1D Schrödinger eigenvalue problem, recovering bound-state energies and wavefunctions for standard Hamiltonians.
+- **[Quantum-Phase-Recognition-Pipeline](https://github.com/prasang06/Quantum-Phase-Recognition-Pipeline)** — Quantum ML pipeline that learns to recognize the phase transition of the transverse-field Ising model: VQE ground states encoded into a variational quantum classifier (Qiskit, JAX).
+- **[Mini-RL-Gym-for-Quantum-Circuits-using-ZX-Calc](https://github.com/prasang06/Mini-RL-Gym-for-Quantum-Circuits-using-ZX-Calc)** — Q-learning agent that learns ZX-calculus rules to simplify quantum circuits (PyZX).
+- **[TopoRAG](https://github.com/prasang06/TopoRAG)** — Topology-aware graph RAG for scientific literature: arXiv ingestion, GCN/GAT citation-graph embeddings (JAX), dense retrieval, local-LLM synthesis.
+- **[TDSE-for-Qubit-Dynamics](https://github.com/prasang06/TDSE-for-Qubit-Dynamics)** — JAX simulator for static and driven qubit dynamics via the time-dependent Schrödinger equation, with Bloch-sphere visualizations.
+
+---
+
+### Technical Work
+
+**Research interests**
 
 - **Quantum Computing & Quantum Algorithms** — circuit design, algorithm analysis, and the computational structure of quantum systems.
 - **Quantum Machine Learning** — hybrid quantum-classical models and learning methods for quantum data.
@@ -37,9 +37,7 @@ My contribution history as an isometric skyline: tall towers are weeks of heavy 
 - **Optimization** — QUBO formulations and hybrid solvers for hard combinatorial problems.
 - **AI, LLMs & Reinforcement Learning** — large language models and agents for scientific and engineering problems.
 
----
-
-### Technical Stack
+**Stack**
 
 #### Languages
 
