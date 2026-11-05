@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="44" viewBox="0 0 200 44">
+  <rect x="0.5" y="0.5" width="199" height="43" rx="10" fill="rgb(23,17,48)" stroke="rgb(55,48,90)"/>
+  <g fill="none" stroke="rgb(211,192,247)" stroke-width="1.6">
+    <circle cx="29" cy="22" r="11"/>
+    <ellipse cx="29" cy="22" rx="4.6" ry="11"/>
+    <path d="M18 22 h22"/>
+    <path d="M19.6 16.5 h18.8 M19.6 27.5 h18.8" stroke-width="1.2"/>
+  </g>
+  <text x="54" y="27" font-family="Ubuntu, Helvetica, Arial, sans-serif" font-size="12" letter-spacing="2.5" fill="rgb(236,231,248)">WEBSITE</text>
+  <text x="182" y="27" font-family="Ubuntu, Helvetica, Arial, sans-serif" font-size="13" text-anchor="end" fill="rgb(139,127,184)">→</text>
+</svg>
