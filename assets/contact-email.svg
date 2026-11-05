@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="44" viewBox="0 0 200 44">
+  <rect x="0.5" y="0.5" width="199" height="43" rx="10" fill="rgb(23,17,48)" stroke="rgb(55,48,90)"/>
+  <g fill="none" stroke="rgb(211,192,247)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="18" y="14" width="22" height="16" rx="3"/>
+    <path d="M19.5 16 L29 23.2 L38.5 16"/>
+  </g>
+  <text x="54" y="27" font-family="Ubuntu, Helvetica, Arial, sans-serif" font-size="12" letter-spacing="2.5" fill="rgb(236,231,248)">EMAIL</text>
+  <text x="182" y="27" font-family="Ubuntu, Helvetica, Arial, sans-serif" font-size="13" text-anchor="end" fill="rgb(139,127,184)">→</text>
+</svg>

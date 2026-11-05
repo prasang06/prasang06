@@ -4,7 +4,7 @@
 - crops the isometric tower grid to the most recent N weeks
 - themes it:
     purple  -> smooth height-driven gradient, deep purple canvas,
-               slow per-tower oscillation
+               towers rise from the floor, subtle peak bob
     green / violet -> discrete level colors (no oscillation)
 - lays out a title, legend and stats block beside the grid
 
@@ -15,6 +15,7 @@ Usage:
     python3 crop_tower.py --weeks 27 --theme purple
 """
 import argparse
+import math
 import re
 import sys
 from collections import Counter
@@ -188,33 +189,51 @@ def fit_lattice(cells, s, h_flat):
     return kept
 
 
-def osc_element(x, y, amp, phase):
-    """Slow vertical bob: one ease-in-out up/down cycle every 7s,
-    phase-shifted so a wave travels across the grid."""
-    return (
-        '<animateTransform attributeName="transform" type="translate" '
-        'values="%.2f %.2f;%.2f %.2f;%.2f %.2f" keyTimes="0;0.5;1" '
-        'calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1" '
-        'dur="7s" begin="%.2fs" repeatCount="indefinite"/>'
-        % (x, y, x, y - amp, x, y, -phase)
-    )
+def osc_values(amp, phase, n=16):
+    """Sampled sine (0 -> amp -> 0) starting at the given phase (0..1),
+    so every tower shares one clock but sits at its own point in it."""
+    vals = [amp * (1 - math.cos(2 * math.pi * (k / n + phase))) / 2 for k in range(n + 1)]
+    return vals, ";".join("%.4f" % (k / n) for k in range(n + 1))
 
 
-def rebuild_cell(html, rgb_faces, osc):
-    """Swap a cell's level classes for inline fills and replace the
-    growth animation with the given oscillation element ('' = none)."""
+def rebuild_cell(html, rgb_faces, grads, osc):
+    """Swap a cell's level classes for inline fills / gradients and add a
+    subtle peak bob: the top face rises by amp while the side faces grow
+    to match, so the base stays planted. The generator's own growth
+    animation (group translate + side height) is kept, so towers rise
+    from the floor."""
     head_m = re.match(r'<g transform="translate\([^"]*\)">', html)
     head = head_m.group(0)
     inner = html[len(head): -len("</g>")]
+    growth = "".join(re.findall(r"<animateTransform\b[^>]*/>|<animateTransform\b[^>]*>\s*</animateTransform>", inner))
     inner = re.sub(r"<animateTransform\b[^>]*/>", "", inner)
-    inner = re.sub(r"<animateTransform\b[^>]*></animateTransform>", "", inner)
+    inner = re.sub(r"<animateTransform\b[^>]*>\s*</animateTransform>", "", inner)
+    rects = re.findall(r"<rect\b[^>]*>", inner)
     if rgb_faces is not None:
-        rects = re.findall(r"<rect\b[^>]*>", inner)
-        for old, col in zip(rects[:3], rgb_faces):
+        for i, (old, col) in enumerate(zip(rects[:3], rgb_faces)):
             base = re.sub(r'\sclass="[^"]*"|\sstyle="[^"]*"', "", old)
-            new = base[:-1] + ' fill="%s">' % rgb_css(col)
+            fill = "url(#%s)" % grads[i - 1] if grads and i > 0 else rgb_css(col)
+            new = base[:-1] + ' fill="%s">' % fill
             inner = inner.replace(old, new, 1)
-    return head + osc + inner + "</g>"
+    if osc:
+        amp, s, phase = osc
+        dur, begin = 2.6, 3.0
+        ty, kt = osc_values(amp, phase)
+
+        def side(m):
+            h = float(m.group(1))
+            vals = ";".join("%.3f" % (h + v / s) for v in ty)
+            anim = ('<animate attributeName="height" values="%s" keyTimes="%s" dur="%.1fs" '
+                    'begin="%.1fs" repeatCount="indefinite"/>' % (vals, kt, dur, begin))
+            return m.group(0).replace("</rect>", anim + "</rect>")
+
+        inner = re.sub(r'<rect\b[^>]*height="([\d.]+)" transform="(?:translate\([^)]*\) )?skewY\((?:30|-30)\) scale[^>]*>.*?</rect>',
+                       side, inner, flags=re.S)
+        bob = ('<animateTransform attributeName="transform" type="translate" values="%s" keyTimes="%s" '
+               'dur="%.1fs" begin="%.1fs" repeatCount="indefinite"/>'
+               % (";".join("0 %.3f" % -v for v in ty), kt, dur, begin))
+        inner = "<g>" + bob + inner + "</g>"
+    return head + growth + inner + "</g>"
 
 
 def cell_level(html):
@@ -287,7 +306,7 @@ def process(path, weeks, theme):
 
     def faces_for(level, h):
         if theme == "purple" and not is_pattern:
-            u = 0.0 if abs(h - h_flat) < 0.05 else min(1.0, (h - h_flat) / h_range)
+            u = 0.0 if abs(h - h_flat) < 0.05 else math.sqrt(min(1.0, (h - h_flat) / h_range))
             base = lerp_color(stops, u)
             return tuple(shade(base, FACE_SHADE[f]) for f in ("top", "left", "right")), u
         l0 = L0_FALLBACK[variant]
@@ -296,18 +315,35 @@ def process(path, weeks, theme):
 
     # rebuild cells
     cells_html = []
+    grad_defs = []
+    floor = lerp_color(stops, 0.0) if stops else None
     for b, a, x, y, h, _start, html in sorted(window, key=lambda c: c[5]):
         level = cell_level(html)
         u = 0.0
         rgb_faces = None
+        grads = None
         if theme == "purple" and not is_pattern:
             rgb_faces, u = faces_for(level, h)
-        osc = ""
+            if h > h_flat + 0.05:
+                # side faces fade from the floor color at the base to the
+                # tower's own color at the peak
+                grads = []
+                for face in ("left", "right"):
+                    gid = "tw-%d-%d-%s" % (b, a, face[0])
+                    grads.append(gid)
+                    grad_defs.append(
+                        '<linearGradient id="%s" x1="0" y1="1" x2="0" y2="0">'
+                        '<stop offset="0" stop-color="%s"/><stop offset="1" stop-color="%s"/></linearGradient>'
+                        % (gid, rgb_css(shade(floor, FACE_SHADE[face])),
+                           rgb_css(shade(lerp_color(stops, u), FACE_SHADE[face])))
+                    )
+        osc = None
         if oscillate and h > h_flat + 0.05:
-            amp = 1.0 + 2.2 * u
-            phase = (a + b) * 0.5
-            osc = osc_element(x, y, amp, phase)
-        cells_html.append(rebuild_cell(html, rgb_faces, osc))
+            # small relative to the tower: ~6% of its height, never < 1.8 units
+            amp = max(1.8, 0.06 * s * h)
+            phase = ((a + b) * 0.09) % 1.0
+            osc = (amp, s, phase)
+        cells_html.append(rebuild_cell(html, rgb_faces, grads, osc))
 
     # style
     new_style = strip_keyframes(style)
@@ -416,11 +452,6 @@ def process(path, weeks, theme):
         font, rgb_css(mu), font, rgb_css(mu), font, rgb_css(mu),
         font, rgb_css(t), format(total, ","), font, rgb_css(t), active, font, rgb_css(t), streak,
     )
-    footer = (
-        '<text x="%.0f" y="%.0f" %s font-size="10.5" letter-spacing="1.5" text-anchor="end" fill="%s">'
-        "GENERATED BY YOSHI389111/GITHUB-PROFILE-3D-CONTRIB \u00b7 MIT</text>"
-    ) % (canvas_w - 24, canvas_h - 16, font, rgb_css(fa))
-
     # legend gradient
     if stops:
         grad_stops = "".join(
@@ -436,8 +467,8 @@ def process(path, weeks, theme):
     defs_m = re.search(r"<defs>.*?</defs>", svg, re.S)
     defs = defs_m.group(0) if defs_m else ""
     defs += (
-        '<defs><linearGradient id="lg-grad" x1="0" y1="0" x2="1" y2="0">%s</linearGradient></defs>'
-        % grad_stops
+        '<defs><linearGradient id="lg-grad" x1="0" y1="0" x2="1" y2="0">%s</linearGradient>%s</defs>'
+        % (grad_stops, "".join(grad_defs))
     )
 
     if bg:
@@ -447,11 +478,11 @@ def process(path, weeks, theme):
 
     out = (
         '<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="%d" viewBox="0 0 %.0f %.0f">%s%s%s%s'
-        '<g transform="translate(%.2f %.2f) scale(%.4f)">%s</g>%s</svg>'
+        '<g transform="translate(%.2f %.2f) scale(%.4f)">%s</g></svg>'
         % (
             round(1280 * canvas_h / canvas_w), canvas_w, canvas_h,
             new_style, defs, bg_rect, text_block,
-            tx, ty, scale, "".join(cells_html), footer,
+            tx, ty, scale, "".join(cells_html),
         )
     )
     path.write_text(out, encoding="utf-8")

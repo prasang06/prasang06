@@ -12,7 +12,8 @@
 
 ---
 
-### Let's Connect
-
-- **Email:** prasangdas06@gmail.com
-- **LinkedIn:** https://www.linkedin.com/in/prasang0/
+<p align="center">
+  <a href="mailto:prasangdas06@gmail.com"><img src="./assets/contact-email.svg" height="44" alt="Email: prasangdas06@gmail.com" /></a>
+  &nbsp;
+  <a href="https://www.linkedin.com/in/prasang0/"><img src="./assets/contact-linkedin.svg" height="44" alt="LinkedIn: prasang0" /></a>
+</p>
