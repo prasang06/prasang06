@@ -4,7 +4,7 @@
 - crops the isometric tower grid to the most recent N weeks
 - themes it:
     purple  -> smooth height-driven gradient, deep purple canvas,
-               towers rise from the floor, subtle peak bob
+               subtle peak bob with an animated gradient
     green / violet -> discrete level colors (no oscillation)
 - lays out a title, legend and stats block beside the grid
 
@@ -193,7 +193,7 @@ def fit_lattice(cells, s, h_flat):
     return kept
 
 
-OSC_DUR, OSC_BEGIN = 2.6, 3.0
+OSC_DUR, OSC_BEGIN = 2.6, 0.0
 
 
 def mix(c0, c1, t):
@@ -201,7 +201,7 @@ def mix(c0, c1, t):
 
 
 def osc_anim(attr, values, kt):
-    """Infinite animation on the shared bob clock (starts once growth ends)."""
+    """Infinite animation on the shared bob clock."""
     return ('<animate attributeName="%s" values="%s" keyTimes="%s" dur="%.1fs" '
             'begin="%.1fs" repeatCount="indefinite"/>' % (attr, values, kt, OSC_DUR, OSC_BEGIN))
 
@@ -216,15 +216,13 @@ def osc_values(amp, phase, n=16):
 def rebuild_cell(html, rgb_faces, grads, osc, top_anim=""):
     """Swap a cell's level classes for inline fills / gradients and add a
     subtle peak bob: the top face rises by amp while the side faces grow
-    to match, so the base stays planted. The generator's own growth
-    animation (group translate + side height) is kept, so towers rise
-    from the floor."""
+    to match, so the base stays planted. The generator's growth
+    animation is dropped: towers render at full height from the start."""
     head_m = re.match(r'<g transform="translate\([^"]*\)">', html)
     head = head_m.group(0)
     inner = html[len(head): -len("</g>")]
-    growth = "".join(re.findall(r"<animateTransform\b[^>]*/>|<animateTransform\b[^>]*>\s*</animateTransform>", inner))
-    inner = re.sub(r"<animateTransform\b[^>]*/>", "", inner)
-    inner = re.sub(r"<animateTransform\b[^>]*>\s*</animateTransform>", "", inner)
+    inner = re.sub(r"<animateTransform\b[^>]*/>|<animateTransform\b[^>]*>\s*</animateTransform>", "", inner)
+    inner = re.sub(r"<animate\b[^>]*/>|<animate\b[^>]*>\s*</animate>", "", inner)
     rects = re.findall(r"<rect\b[^>]*>", inner)
     if rgb_faces is not None:
         for i, (old, col) in enumerate(zip(rects[:3], rgb_faces)):
@@ -250,7 +248,7 @@ def rebuild_cell(html, rgb_faces, grads, osc, top_anim=""):
                'dur="%.1fs" begin="%.1fs" repeatCount="indefinite"/>'
                % (";".join("0 %.3f" % -v for v in ty), kt, OSC_DUR, OSC_BEGIN))
         inner = "<g>" + bob + inner + "</g>"
-    return head + growth + inner + "</g>"
+    return head + inner + "</g>"
 
 
 def cell_level(html):
