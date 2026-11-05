@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <img src="./assets/terminal.svg?v=2" width="860" alt="Terminal — Prasang: quantum computing and AI research engineer at IIT Hyderabad, research interests and stack" />
+  <img src="./assets/terminal.svg?v=3" width="860" alt="Terminal — Prasang: quantum computing and AI research engineer at IIT Hyderabad, research interests and stack" />
 </p>
 
 ---

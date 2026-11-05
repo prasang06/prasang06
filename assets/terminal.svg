@@ -1,29 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="860" height="586" viewBox="0 0 860 586" role="img" aria-label="Terminal: Prasang, quantum computing and AI research engineer at IIT Hyderabad; research interests and stack">
-  <rect x="0.5" y="0.5" width="859" height="585" rx="10" fill="#171130" stroke="#37305a" stroke-width="1"/>
-  <path d="M0.5 38 V10.5 A10 10 0 0 1 10.5 0.5 H849.5 A10 10 0 0 1 859.5 10.5 V38 Z" fill="#1f1840"/>
-  <line x1="0.5" y1="38" x2="859.5" y2="38" stroke="#37305a" stroke-width="1"/>
-  <circle cx="24" cy="19.5" r="5.5" fill="#8b5cf6"/>
-  <circle cx="42" cy="19.5" r="5.5" fill="#a78bfa"/>
-  <circle cx="60" cy="19.5" r="5.5" fill="#c4b5fd"/>
-  <text x="430" y="24.5" text-anchor="middle" font-family="'JetBrains Mono','Fira Code','SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="14" fill="#8b7fb8">prasang@archlinux</text>
+  <rect x="0.5" y="0.5" width="859" height="585" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+  <path d="M0.5 38 V10.5 A10 10 0 0 1 10.5 0.5 H849.5 A10 10 0 0 1 859.5 10.5 V38 Z" fill="#161b22"/>
+  <line x1="0.5" y1="38" x2="859.5" y2="38" stroke="#30363d" stroke-width="1"/>
+  <circle cx="24" cy="19.5" r="5.5" fill="#ff5f56"/>
+  <circle cx="42" cy="19.5" r="5.5" fill="#ffbd2e"/>
+  <circle cx="60" cy="19.5" r="5.5" fill="#27c93f"/>
+  <text x="430" y="24.5" text-anchor="middle" font-family="'JetBrains Mono','Fira Code','SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="14" fill="#8b949e">prasang@archlinux</text>
   <g font-family="'JetBrains Mono','Fira Code','SF Mono',Menlo,Consolas,'DejaVu Sans Mono',monospace" font-size="15">
-    <text x="24" y="74"><tspan fill="#b794f6">prasang@archlinux</tspan><tspan fill="#8b7fb8">&#160;~</tspan></text>
-    <text x="24" y="100"><tspan fill="#8b7fb8">$&#160;</tspan><tspan fill="#ece7f8">whoami</tspan></text>
-    <text x="24" y="126" fill="#d3c0f7">Quantum computing &amp; AI research engineer at IIT Hyderabad</text>
-    <text x="24" y="152" fill="#d3c0f7">using computation to understand physical systems</text>
-    <text x="24" y="204"><tspan fill="#8b7fb8">$&#160;</tspan><tspan fill="#ece7f8">cat</tspan><tspan fill="#8b7fb8">&#160;</tspan><tspan fill="#c9a8ff">research.txt</tspan></text>
-    <text x="24" y="230" fill="#8b7fb8">&#160;&#160;quantum computing &amp; quantum algorithms</text>
-    <text x="24" y="256" fill="#8b7fb8">&#160;&#160;quantum machine learning</text>
-    <text x="24" y="282" fill="#8b7fb8">&#160;&#160;scientific ML — PINNs, neural PDE solvers</text>
-    <text x="24" y="308" fill="#8b7fb8">&#160;&#160;computational physics</text>
-    <text x="24" y="334" fill="#8b7fb8">&#160;&#160;optimization — QUBO, hybrid solvers</text>
-    <text x="24" y="360" fill="#8b7fb8">&#160;&#160;ai, llms &amp; reinforcement learning</text>
-    <text x="24" y="412"><tspan fill="#8b7fb8">$&#160;</tspan><tspan fill="#ece7f8">stack</tspan></text>
-    <text x="24" y="438"><tspan fill="#8b7fb8">&#160;&#160;</tspan><tspan fill="#b794f6">langs</tspan><tspan fill="#8b7fb8">&#160;&#160;&#160;&#160;python, c++, c, julia</tspan></text>
-    <text x="24" y="464"><tspan fill="#8b7fb8">&#160;&#160;</tspan><tspan fill="#b794f6">sci</tspan><tspan fill="#8b7fb8">&#160;&#160;&#160;&#160;&#160;&#160;jax, numpy, scipy</tspan></text>
-    <text x="24" y="490"><tspan fill="#8b7fb8">&#160;&#160;</tspan><tspan fill="#b794f6">ml</tspan><tspan fill="#8b7fb8">&#160;&#160;&#160;&#160;&#160;&#160;&#160;pytorch, tensorflow</tspan></text>
-    <text x="24" y="516"><tspan fill="#8b7fb8">&#160;&#160;</tspan><tspan fill="#b794f6">quantum</tspan><tspan fill="#8b7fb8">&#160;&#160;qiskit</tspan></text>
-    <text x="24" y="542"><tspan fill="#8b7fb8">&#160;&#160;</tspan><tspan fill="#b794f6">infra</tspan><tspan fill="#8b7fb8">&#160;&#160;&#160;&#160;cuda, linux, hpc, distributed inference</tspan></text>
-    <text x="24" y="568"><tspan fill="#8b7fb8">$&#160;</tspan><tspan fill="#ece7f8">▊</tspan></text>
+    <text x="24" y="74"><tspan fill="#b794f6">prasang@archlinux</tspan><tspan fill="#8b949e">&#160;~</tspan></text>
+    <text x="24" y="100"><tspan fill="#8b949e">$&#160;</tspan><tspan fill="#e6edf3">whoami</tspan></text>
+    <text x="24" y="126" fill="#c9d1d9">Quantum computing &amp; AI research engineer at IIT Hyderabad</text>
+    <text x="24" y="152" fill="#c9d1d9">using computation to understand physical systems</text>
+    <text x="24" y="204"><tspan fill="#8b949e">$&#160;</tspan><tspan fill="#e6edf3">cat</tspan><tspan fill="#8b949e">&#160;</tspan><tspan fill="#79c0ff">research.txt</tspan></text>
+    <text x="24" y="230" fill="#8b949e">&#160;&#160;quantum computing &amp; quantum algorithms</text>
+    <text x="24" y="256" fill="#8b949e">&#160;&#160;quantum machine learning</text>
+    <text x="24" y="282" fill="#8b949e">&#160;&#160;scientific ML — PINNs, neural PDE solvers</text>
+    <text x="24" y="308" fill="#8b949e">&#160;&#160;computational physics</text>
+    <text x="24" y="334" fill="#8b949e">&#160;&#160;optimization — QUBO, hybrid solvers</text>
+    <text x="24" y="360" fill="#8b949e">&#160;&#160;ai, llms &amp; reinforcement learning</text>
+    <text x="24" y="412"><tspan fill="#8b949e">$&#160;</tspan><tspan fill="#e6edf3">stack</tspan></text>
+    <text x="24" y="438"><tspan fill="#8b949e">&#160;&#160;</tspan><tspan fill="#b794f6">langs</tspan><tspan fill="#8b949e">&#160;&#160;&#160;&#160;python, c++, c, julia</tspan></text>
+    <text x="24" y="464"><tspan fill="#8b949e">&#160;&#160;</tspan><tspan fill="#b794f6">sci</tspan><tspan fill="#8b949e">&#160;&#160;&#160;&#160;&#160;&#160;jax, numpy, scipy</tspan></text>
+    <text x="24" y="490"><tspan fill="#8b949e">&#160;&#160;</tspan><tspan fill="#b794f6">ml</tspan><tspan fill="#8b949e">&#160;&#160;&#160;&#160;&#160;&#160;&#160;pytorch, tensorflow</tspan></text>
+    <text x="24" y="516"><tspan fill="#8b949e">&#160;&#160;</tspan><tspan fill="#b794f6">quantum</tspan><tspan fill="#8b949e">&#160;&#160;qiskit</tspan></text>
+    <text x="24" y="542"><tspan fill="#8b949e">&#160;&#160;</tspan><tspan fill="#b794f6">infra</tspan><tspan fill="#8b949e">&#160;&#160;&#160;&#160;cuda, linux, hpc, distributed inference</tspan></text>
+    <text x="24" y="568"><tspan fill="#8b949e">$&#160;</tspan><tspan fill="#e6edf3">▊</tspan></text>
   </g>
 </svg>
