@@ -5,9 +5,9 @@
 ---
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-rainbow.svg">
-  <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-season.svg">
-  <img alt="contribution skyline" src="./profile-3d-contrib/profile-night-rainbow.svg" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="./profile-3d-contrib/profile-night-rainbow.svg?v=2">
+  <source media="(prefers-color-scheme: light)" srcset="./profile-3d-contrib/profile-season.svg?v=2">
+  <img alt="contribution skyline" src="./profile-3d-contrib/profile-night-rainbow.svg?v=2" width="100%">
 </picture>
 
 ---
