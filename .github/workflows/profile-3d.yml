@@ -8,12 +8,18 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: profile-3d
+  cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
     name: generate 3d contribution svg
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: main   # branch tip at run time, not the (possibly stale) trigger SHA
       - uses: yoshi389111/github-profile-3d-contrib@latest
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -24,7 +30,12 @@ jobs:
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add -A .
+          git add profile-3d-contrib
           if git commit -m "generated"; then
-            git push
+            # main may have moved while this run was queued; replay on top
+            for i in 1 2 3; do
+              git pull --rebase -X theirs origin main && git push && exit 0
+              sleep 5
+            done
+            exit 1
           fi
